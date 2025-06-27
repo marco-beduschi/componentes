@@ -1,0 +1,24 @@
+.details {
+    border: 1px solid #e4e5e9;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.details > summary {
+    display: flex;
+    justify-content: space-between;
+
+    &::after {
+        content: "\00FF0B";
+        margin-left: auto;
+        transition: transform 150ms ease-in-out;
+    }
+}
+
+.details[open] > summary {
+    margin-block-end: 16px;
+
+    &::after {
+        transform: rotate(45deg);
+    }
+}
